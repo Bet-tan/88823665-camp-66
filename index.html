@@ -5,19 +5,28 @@
         <title>88823665-camp-66-by-66160242</title>
     </head>
         <body>
-            <label for="1name">ชื่อ </label>&nbsp;&nbsp;&nbsp;
-            <input type="text" id="1name" name="1name"> <br><br>
+            
+            <style>
+                label {
+                display: inline-block; 
+                width: 140px;
+                }
+              </style>
 
-            <label for="2name">สกุล </label>&nbsp;&nbsp;&nbsp;&nbsp;
+            <label for="1name">ชื่อ </label>
+            <input type="text" id="1name" name="1name">
+            <br><br>
+
+            <label for="2name">สกุล </label>
             <input type="text" id="2name" name="2name"> <br><br>
 
             <label for="birthday">วัน/เดือน/ปีเกิด </label>
             <input type="date" id="birthday" name="birthday"> <br><br>
 
-            <label for="age">อายุ </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <label for="age">อายุ </label>
             <input type="text" id="age" name="age"> <br><br>
             
-            <label>เพศ </label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <label>เพศ </label> 
             <input type="radio" id="option1" name="gender" value="option1">
             <label for="option1">ชาย</label>
     
@@ -27,14 +36,14 @@
             <input type="radio" id="option3" name="gender" value="option3">
             <label for="option3">ตู้เย็น</label> <br><br>
 
-            <label for="image">รูป</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <label for="image">รูป</label>
             <input type="file" id="image" name="image" accept="image/*"> <br><br>
 
-            <label for="address">ที่อยู่ </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <label for="address">ที่อยู่ </label>
             <textarea id="address" name="address"></textarea> <br><br>
 
             <form>
-                <label for="choices">สีที่ชอบ</label>&nbsp;&nbsp;&nbsp;
+                <label for="choices">สีที่ชอบ</label>
                 <select id="choices" name="choices">
                     <option value="option1">แดง</option>
                     <option value="option2">เขียว</option>
@@ -46,7 +55,7 @@
                 </select>
             </form>
             <br><br>
-            <label>แนวเพลงที่ชอบ </label> &nbsp;
+            <label>แนวเพลงที่ชอบ </label>
             <input type="radio" id="option1" name="music" value="option1">
             <label for="option1">เพื่อชีวิต</label>
 
@@ -56,7 +65,7 @@
             <input type="radio" id="option3" name="music" value="option3">
             <label for="option3">Terraria Calamity</label>
 
-            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <br>
             <input type="radio" id="option4" name="music" value="option4">
             <label for="option4">อื่นๆ</label> <br><br>
 
@@ -65,7 +74,7 @@
                 <label for="agree">ยินยอมให้เก็บข้อมูล</label>
             </form> <br><br>
 
-            <button type="button">Reset</button> &nbsp;&nbsp;&nbsp;
+            <button type="button">Reset</button>
             <button type="button">Submit</button>
         </body>
 </html>
