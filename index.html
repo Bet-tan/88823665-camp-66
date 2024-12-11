@@ -2,79 +2,101 @@
 <html lang = "th">
     <head>
         <meta charset="UTF-8">
-        <title>88823665-camp-66-by-66160242</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="mystyle.css">
+        <title>88823665-camp-66</title>
     </head>
-        <body>
-            
-            <style>
-                label {
-                display: inline-block; 
-                width: 140px;
-                }
-              </style>
-
-            <label for="1name">ชื่อ </label>
-            <input type="text" id="1name" name="1name">
-            <br><br>
-
-            <label for="2name">สกุล </label>
-            <input type="text" id="2name" name="2name"> <br><br>
-
-            <label for="birthday">วัน/เดือน/ปีเกิด </label>
-            <input type="date" id="birthday" name="birthday"> <br><br>
-
-            <label for="age">อายุ </label>
-            <input type="text" id="age" name="age"> <br><br>
-            
-            <label>เพศ </label> 
-            <input type="radio" id="option1" name="gender" value="option1">
-            <label for="option1">ชาย</label>
-    
-            <input type="radio" id="option2" name="gender" value="option2">
-            <label for="option2">หญิง</label>
-            
-            <input type="radio" id="option3" name="gender" value="option3">
-            <label for="option3">ตู้เย็น</label> <br><br>
-
-            <label for="image">รูป</label>
-            <input type="file" id="image" name="image" accept="image/*"> <br><br>
-
-            <label for="address">ที่อยู่ </label>
-            <textarea id="address" name="address"></textarea> <br><br>
-
+        <body style="background-color: rgb(0, 0, 0);">
             <form>
+                <style>
+
+                    label {
+                    display: inline-block; 
+                    width: 140px;
+                    color: rgb(255, 255, 255);
+                    }
+                    thHead {
+                        font-size: 40px;
+                        color: rgb(255, 255, 255);
+                        border-bottom-style: solid;
+                        border-top-style: solid;
+                        border-color: white;
+                    }
+                    thHead:hover{
+                        background-color: white;
+                        color: black;
+                    }
+                    label2 {
+                        color: white;
+                    }
+                </style>
+                <thHead>Workshop #HTML-FORM</thHead>
+                <br><br>
+
+                <label for="1name">ชื่อ </label>
+                <input type="text" id="1name" name="1name">
+                <br><br>
+
+                <label for="2name">สกุล </label>
+                <input type="text" id="2name" name="2name"> <br><br>
+
+                <label for="birthday">วัน/เดือน/ปีเกิด </label>
+                <input type="date" id="birthday" name="birthday"> <br><br>
+
+                <label for="age">อายุ </label>
+                <input type="text" id="age" name="age"> <br><br>
+                
+                <label>เพศ </label> 
+                <input type="radio" id="option1" name="gender" value="option1">
+                <label2 for="option1">ชาย</label2>
+        
+                <input type="radio" id="option2" name="gender" value="option2">
+                <label2 for="option2">หญิง</label2>
+                
+                <input type="radio" id="option3" name="gender" value="option3">
+                <label2 for="option3">ตู้เย็น</label2> <br><br>
+
+                <label for="image">รูป</label>
+                <input type="file" id="image" name="image" accept="image/*"> <br><br>
+
+                <label for="address">ที่อยู่ </label>
+                <textarea id="address" name="address"></textarea> <br><br>
+
+            
                 <label for="choices">สีที่ชอบ</label>
                 <select id="choices" name="choices">
                     <option value="option1">แดง</option>
-                    <option value="option2">เขียว</option>
-                    <option value="option3">น้ำเงิน</option>
-                    <option value="option4">ม่วง</option>
-                    <option value="option5">ดำ</option>
+                    <option value="option2">แดง</option>
+                    <option value="option3">แดง</option>
+                    <option value="option4">แดง</option>
+                    <option value="option5">แดง</option>
                     <option value="option6">ส้ม</option>
-                    <option value="option7">เหลือง</option>
+                    <option value="option7">แดงมากๆ</option>
                 </select>
-            </form>
-            <br><br>
-            <label>แนวเพลงที่ชอบ </label>
-            <input type="radio" id="option1" name="music" value="option1">
-            <label for="option1">เพื่อชีวิต</label>
+            
+                <br><br>
+                <label>แนวเพลงที่ชอบ </label>
+                <input type="radio" id="option1" name="music" value="option1">
+                <label2 for="option1">เพื่อชีวิต</label2>
 
-            <input type="radio" id="option2" name="music" value="option2">
-            <label for="option2">ลูกทุ่ง</label>
-    
-            <input type="radio" id="option3" name="music" value="option3">
-            <label for="option3">Terraria Calamity</label>
+                <input type="radio" id="option2" name="music" value="option2">
+                <label2 for="option2">ลูกทุ่ง</label2>
+        
+                <input type="radio" id="option3" name="music" value="option3">
+                <label2 for="option3">Terraria Calamity</label2>
 
-            <br>
-            <input type="radio" id="option4" name="music" value="option4">
-            <label for="option4">อื่นๆ</label> <br><br>
+                <input type="radio" id="option4" name="music" value="option4">
+                <label2 for="option4">อื่นๆ</label2> <br><br>
 
-            <form>
+                
                 <input type="checkbox" id="agree" name="agree">
                 <label for="agree">ยินยอมให้เก็บข้อมูล</label>
-            </form> <br><br>
+                <br><br>
 
-            <button type="button">Reset</button>
-            <button type="button">Submit</button>
+                <button type="button">Reset</button> &sb&sb
+                <button type="button">Submit</button>
+            </form>
         </body>
 </html>
