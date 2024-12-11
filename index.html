@@ -9,7 +9,7 @@
             <form>
                 <style>
                     body {
-                        background: linear-gradient(to right,black 10%,#1c1263 );
+                        background: linear-gradient(to right,black ,#004136 140%);
                         justify-content: center; 
                     }
                     label {
@@ -18,43 +18,51 @@
                     .label1 {
                     display: inline-block; 
                     width: 140px;
-                    color: wheat;
+                    color: rgb(192, 255, 230);
                     padding-left: 330px;
+                    font-weight: bold;
+                    text-shadow: 0px 1px 0px rgba(127, 255, 212, 0.447);
                     }
                     .thHead {
                         font-size: 40px;
-                        color: rgb(255, 255, 255);
+                        color: rgb(127, 255, 212);
                         margin-left: 150px;
                         text-align: center;
-                        border-top: 2px solid white;
-                        border-bottom: 2px solid white;
+                        border-top: 2px solid rgb(127, 255, 212);
+                        border-bottom: 2px solid rgb(127, 255, 212);
                         width: 39%;
-                        padding: 6px 0;                        /* ช่องว่างแบ่งตัวอักษรจากขอบ*/
+                        padding: 6px 0;                        /* ช่องว่างแบ่งตัวอักษรจากขอบ^*/
                         margin: auto;                              /* เอาเว้นบรรทัด default ออก*/
                         transition: background-color 0.3s, color 0.3s; /* hover ลื่น*/
                     }
                     .thHead:hover {
-                        background-color: white;
-                        color: black; /* text */
+                        background-color:rgb(210, 255, 240);
+                        color: rgb(0, 0, 0); /* text */
                     }
                     input[type="file"] {
                         padding: 10px;
                         font-size: 16px;
-                        border: 2px solid white;
+                        border: 2px solid rgb(192, 255, 230);
                         background-color: transparent;
-                        color: wheat;
+                        color:rgb(192, 255, 230);
                         cursor: pointer;
+                    }
+                    textarea {
+                        background-color: rgb(192, 255, 230);
+                    }
+                    input[type="text"] {
+                        background-color: rgb(192, 255, 230);
+                    }
+                    input[type="text"]:focus {
+                        outline: 3px solid rgb(192, 255, 230);
+                        border-color: black;
                     }
                     .label2 {
                         font-family: "Noto Sans Thai", sans-serif;
-                        color: wheat;
-                    }
-                    input[type="text"]:focus {
-                        outline: 3px solid wheat;
-                        border-color: black;
+                        color: rgb(192, 255, 230);
                     }
                     textarea:focus {
-                        outline: 4px solid wheat;
+                        outline: 4px solid rgb(192, 255, 230);
                         border-color: black;
                     }
 
@@ -69,7 +77,7 @@
                 <input type="text" id="2name" name="2name"> <br><br>
 
                 <label for="birthday" class="label1">วัน/เดือน/ปีเกิด </label>
-                <input type="date" id="birthday" name="birthday"> <br><br>
+                <input type="date" id="birthday" name="birthday" style="background-color: rgb(192, 255, 230);"> <br><br>
 
                 <label for="age" class="label1">อายุ </label>
                 <input type="text" id="age" name="age"> <br><br>
@@ -92,7 +100,7 @@
 
             
                 <label for="choices" class="label1">สีที่ชอบ</label>
-                <select id="choices" name="choices">
+                <select id="choices" name="choices" style="background-color: rgb(192, 255, 230);">
                     <option value="option1">แดง</option>
                     <option value="option2">แดง</option>
                     <option value="option3">แดง</option>
