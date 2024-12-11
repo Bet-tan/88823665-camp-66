@@ -6,80 +6,92 @@
         <link rel="stylesheet" href="mystyle.css">
         <title>88823665-camp-66</title>
     </head>
-        <body style="background-color: rgb(0, 0, 0);">
             <form>
-                <h1 class="thHead">Workshop #HTML-FORM</h1>
                 <style>
+                    body {
+                        background: linear-gradient(to right,black 10%,#1c1263 );
+                        justify-content: center; 
+                    }
                     label {
-                    font-family: "Noto Sans Thai", sans-serif;
+                        font-family: "Noto Sans Thai", sans-serif;
+                    }
+                    .label1 {
                     display: inline-block; 
                     width: 140px;
-                    color: rgb(255, 255, 255);
+                    color: wheat;
+                    padding-left: 330px;
                     }
                     .thHead {
                         font-size: 40px;
                         color: rgb(255, 255, 255);
-                        text-align: left;
+                        margin-left: 150px;
+                        text-align: center;
                         border-top: 2px solid white;
                         border-bottom: 2px solid white;
                         width: 39%;
                         padding: 6px 0;                        /* ช่องว่างแบ่งตัวอักษรจากขอบ*/
-                        margin: 0;                              /* เอาเว้นบรรทัด default ออก*/
+                        margin: auto;                              /* เอาเว้นบรรทัด default ออก*/
                         transition: background-color 0.3s, color 0.3s; /* hover ลื่น*/
                     }
-
                     .thHead:hover {
                         background-color: white;
                         color: black; /* text */
                     }
-                    label2 {
+                    input[type="file"] {
+                        padding: 10px;
+                        font-size: 16px;
+                        border: 2px solid white;
+                        background-color: transparent;
+                        color: wheat;
+                        cursor: pointer;
+                    }
+                    .label2 {
                         font-family: "Noto Sans Thai", sans-serif;
-                        color: white;
+                        color: wheat;
                     }
                     input[type="text"]:focus {
-                        outline: 3px solid white;
+                        outline: 3px solid wheat;
                         border-color: black;
                     }
                     textarea:focus {
-                        outline: 4px solid white;
+                        outline: 4px solid wheat;
                         border-color: black;
                     }
 
                 </style>
-                <thHead>Workshop #HTML-FORM</thHead>
+                <h1 class="thHead">Workshop #HTML-FORM</h1>
                 <br><br>
-
-                <label for="1name">ชื่อ </label>
+                <label for="1name" class="label1">ชื่อ </label>
                 <input type="text" id="1name" name="1name">
                 <br><br>
 
-                <label for="2name">สกุล </label>
+                <label for="2name" class="label1">สกุล </label>
                 <input type="text" id="2name" name="2name"> <br><br>
 
-                <label for="birthday">วัน/เดือน/ปีเกิด </label>
+                <label for="birthday" class="label1">วัน/เดือน/ปีเกิด </label>
                 <input type="date" id="birthday" name="birthday"> <br><br>
 
-                <label for="age">อายุ </label>
+                <label for="age" class="label1">อายุ </label>
                 <input type="text" id="age" name="age"> <br><br>
                 
-                <label>เพศ </label> 
+                <label class="label1">เพศ </label> 
                 <input type="radio" id="option1" name="gender" value="option1">
-                <label2 class="label2" for="option1">ชาย</label2>
+                <label for="option1" class="label2">ชาย</label>
         
                 <input type="radio" id="option2" name="gender" value="option2">
-                <label2 for="option2">หญิง</label2>
+                <label for="option2" class="label2">หญิง</label>
                 
                 <input type="radio" id="option3" name="gender" value="option3">
-                <label2 for="option3">ตู้เย็น</label2> <br><br>
+                <label for="option3" class="label2">ตู้เย็น</label> <br><br>
 
-                <label for="image">รูป</label>
+                <label for="image" class="label1">รูป</label>
                 <input type="file" id="image" name="image" accept="image/*"> <br><br>
 
-                <label for="address">ที่อยู่ </label>
+                <label for="address" class="label1">ที่อยู่ </label>
                 <textarea id="address" name="address"></textarea> <br><br>
 
             
-                <label for="choices">สีที่ชอบ</label>
+                <label for="choices" class="label1">สีที่ชอบ</label>
                 <select id="choices" name="choices">
                     <option value="option1">แดง</option>
                     <option value="option2">แดง</option>
@@ -91,25 +103,25 @@
                 </select>
             
                 <br><br>
-                <label>แนวเพลงที่ชอบ </label>
+                <label class="label1">แนวเพลงที่ชอบ </label>
                 <input type="radio" id="option1" name="music" value="option1">
-                <label2 for="option1">เพื่อชีวิต</label2>
+                <label for="option1" class="label2">เพื่อชีวิต</label>
 
                 <input type="radio" id="option2" name="music" value="option2">
-                <label2 for="option2">ลูกทุ่ง</label2>
+                <label for="option2" class="label2">ลูกทุ่ง</label>
         
                 <input type="radio" id="option3" name="music" value="option3">
-                <label2 for="option3">Terraria Calamity</label2>
+                <label for="option3" class="label2">Terraria Calamity</label>
 
                 <input type="radio" id="option4" name="music" value="option4">
-                <label2 for="option4">อื่นๆ</label2> <br><br>
+                <label for="option4" class="label2">อื่นๆ</label> <br><br>
 
                 
-                <input type="checkbox" id="agree" name="agree">
-                <label for="agree">ยินยอมให้เก็บข้อมูล</label>
+                <input type="checkbox" id="agree" name="agree" style="margin-left: 330px;">
+                <label for="agree" style="padding-left: 0px;" class="label1">ยินยอมให้เก็บข้อมูล</label>
                 <br><br>
 
-                <button type="reset">Reset</button> &sb&sb
+                <button type="reset" style="margin-left: 330px;">Reset</button> &sb&sb
                 <button type="submit">Submit</button>
             </form>
         </body>
