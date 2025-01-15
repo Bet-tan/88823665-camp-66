@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class MyController extends Controller
 {
-    private function myprivite(){
+    private function myprivate(){
         return 1;
     }
     function myfunction(Request $req, $var1=""){
