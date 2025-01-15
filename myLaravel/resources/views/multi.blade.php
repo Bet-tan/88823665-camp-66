@@ -20,7 +20,7 @@
             <button type="submit" class="btn btn-primary">Generate Table</button>
         </form>
 
-        <!-- Display -->
+        <!-- Display but Refined again -->
         @isset($multiplicationTable)
             @if($number)
                 <h2 class="mt-5">Multiplication Table of {{ $number }}</h2>

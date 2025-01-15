@@ -8,7 +8,7 @@ Route::get('/mycontroller/{id?}', [MyController::class, 'myfunction']);
 Route::post('/mycontroller/{id?}', [MyController::class, 'myfunction']);
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
 route::get('/hello/{id?}', function ($val= null) {
@@ -19,7 +19,7 @@ Route::match(['get', 'post'], '/multiplication', function (Illuminate\Http\Reque
     $multiplicationTable = [];
     $number = null;
 
-    // Check if submitted
+    // Check if submitted?
     if ($request->isMethod('post')) {
         $number = $request->input('number');
         // Generate multiplication table for entered number
