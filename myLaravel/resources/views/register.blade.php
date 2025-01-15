@@ -3,10 +3,10 @@
   <!--begin::Head-->
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>AdminLTE 4 | Login Page</title>
+    <title>AdminLTE 4 | Register Page</title>
     <!--begin::Primary Meta Tags-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="title" content="AdminLTE 4 | Login Page" />
+    <meta name="title" content="AdminLTE 4 | Register Page" />
     <meta name="author" content="ColorlibHQ" />
     <meta
       name="description"
@@ -42,21 +42,25 @@
     />
     <!--end::Third Party Plugin(Bootstrap Icons)-->
     <!--begin::Required Plugin(AdminLTE)-->
-    <link rel="stylesheet" href="public/css/adminlte.css" />
+    <link rel="stylesheet" href="../../../dist/css/adminlte.css" />
     <!--end::Required Plugin(AdminLTE)-->
   </head>
   <!--end::Head-->
   <!--begin::Body-->
-  <body class="login-page bg-body-secondary">
-    <div class="login-box">
-      <div class="login-logo">
+  <body class="register-page bg-body-secondary">
+    <div class="register-box">
+      <div class="register-logo">
         <a href="../index2.html"><b>Admin</b>LTE</a>
       </div>
-      <!-- /.login-logo -->
+      <!-- /.register-logo -->
       <div class="card">
-        <div class="card-body login-card-body">
-          <p class="login-box-msg">Sign in to start your session</p>
+        <div class="card-body register-card-body">
+          <p class="register-box-msg">Register a new membership</p>
           <form action="../index3.html" method="post">
+            <div class="input-group mb-3">
+              <input type="text" class="form-control" placeholder="Full Name" />
+              <div class="input-group-text"><span class="bi bi-person"></span></div>
+            </div>
             <div class="input-group mb-3">
               <input type="email" class="form-control" placeholder="Email" />
               <div class="input-group-text"><span class="bi bi-envelope"></span></div>
@@ -70,7 +74,9 @@
               <div class="col-8">
                 <div class="form-check">
                   <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                  <label class="form-check-label" for="flexCheckDefault"> Remember Me </label>
+                  <label class="form-check-label" for="flexCheckDefault">
+                    I agree to the <a href="#">terms</a>
+                  </label>
                 </div>
               </div>
               <!-- /.col -->
@@ -93,15 +99,14 @@
             </a>
           </div>
           <!-- /.social-auth-links -->
-          <p class="mb-1"><a href="forgot-password.html">I forgot my password</a></p>
           <p class="mb-0">
-            <a href="register.html" class="text-center"> Register a new membership </a>
+            <a href="login.html" class="text-center"> I already have a membership </a>
           </p>
         </div>
-        <!-- /.login-card-body -->
+        <!-- /.register-card-body -->
       </div>
     </div>
-    <!-- /.login-box -->
+    <!-- /.register-box -->
     <!--begin::Third Party Plugin(OverlayScrollbars)-->
     <script
       src="https://cdn.jsdelivr.net/npm/overlayscrollbars@2.10.1/browser/overlayscrollbars.browser.es6.min.js"
@@ -121,7 +126,7 @@
       crossorigin="anonymous"
     ></script>
     <!--end::Required Plugin(Bootstrap 5)--><!--begin::Required Plugin(AdminLTE)-->
-    <script src="public/js/adminlte.js"></script>
+    <script src="../../../dist/js/adminlte.js"></script>
     <!--end::Required Plugin(AdminLTE)--><!--begin::OverlayScrollbars Configure-->
     <script>
       const SELECTOR_SIDEBAR_WRAPPER = '.sidebar-wrapper';
