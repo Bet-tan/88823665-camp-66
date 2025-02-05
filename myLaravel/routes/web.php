@@ -11,6 +11,7 @@ Route::get('/login', [LoginController::class, 'index']);
 Route::get('/register', [RegisterController::class, 'index']);
 Route::get('/home', [HomeController::class, 'index']);
 Route::get('/', [HomeController::class, 'index']);
+
 Route::post('/register', [RegisterController::class, 'create']);
 
 Route::get('/mycontroller/{id?}', [MyController::class, 'myfunction']);
@@ -19,12 +20,11 @@ Route::post('/mycontroller/{id?}', [MyController::class, 'myfunction']);
 
 Route::get('/user', [UserController::class, 'index']);
 Route::get('/user/{id}', [UserController::class, 'edit']);
-Route::put
-Route::delete()
+Route::put('/user/{id}', [UserController::class, 'edit_action']);
+Route::delete('/user', [UserController::class, 'delete']);
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/mycontroller/{id?}', [MyController::class, 'myfunction']);
+Route::post('/mycontroller/{id?}', [MyController::class, 'myfunction']);
 
 route::get('/hello/{id?}', function ($val= null) {
     return "<h1>Hello World $val</h1>";

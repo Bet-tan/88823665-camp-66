@@ -4,13 +4,16 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Models\User;
+
 class RegisterController extends Controller
 {
-    function index(){
+
+    function index() {
         return view('register');
     }
 
-    function create(Request $req){
+    function create(Request $req) {
         print_r($req->input());
         $muser = new User();
         $muser->name = $req->input('name');
@@ -18,5 +21,6 @@ class RegisterController extends Controller
         $muser->password = $req->password;
         $muser->save();
         return redirect('/users');
-        }
+
+    }
 }
