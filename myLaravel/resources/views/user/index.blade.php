@@ -25,6 +25,12 @@
                 <td>
                     <button class="btn btn-warning">Edit</button>
                     <button class="btn btn-danger">Delete</button>
+                </a>
+                <form action="{{ url('/user') }}" method="post" >
+                    @csrf
+                    @method('delete')
+                    <input type="hidden" name="id" value="{{ $user->id }}" >
+                    <button type="submit" class="btn btn-danger">Delete</button>
                 </td>
               </tr>
               <?php } ?>
