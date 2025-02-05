@@ -1,4 +1,3 @@
-
 @extends('layouts.default_with_menu')
 
 @section('content')
@@ -50,7 +49,16 @@
           </ul>
         </div>
       </div>
+      <button></button>
       <!-- /.card -->
     </div>
 </div>
+@endsection
+
+@section('scripts')
+    <script>
+        function confirm_delete(){
+            Swal.fire("SweetAlert2 is working!");
+    }
+    </script>
 @endsection

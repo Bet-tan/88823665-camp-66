@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="en">
   <!--begin::Head-->
@@ -44,21 +43,29 @@
     <!--end::Third Party Plugin(Bootstrap Icons)-->
     <!--begin::Required Plugin(AdminLTE)-->
 
-    <!--<link rel="stylesheet" href="../../../dist/css/adminlte.css" />-->
+    <!-- <link rel="stylesheet" href="../../../dist/css/adminlte.css" /> -->
     <link rel="stylesheet" href="{{ url('public/css/adminlte.css') }}" />
-    <!--end::Required Plugin(AdminLTE)-->-->
+    <!--end::Required Plugin(AdminLTE)-->
     @yield('styles')
   </head>
   <!--end::Head-->
   <!--begin::Body-->
   <body class="bg-body-secondary">
-   @yield('content')
-   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-   <script
-   src="https://code.jquery.com/jquery-3.7.1.min.js"
-   integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
-   crossorigin="anonymous"></script>
-    <!-- /.login-box -->
+    <div class="layout-fixed sidebar-expand-lg">
+        <div class="app-wrapper">
+            @include('components.header')
+            @include('components.menu')
+            <main class="app-main">
+                @include('components.top_nav')
+                <!--begin::App Content-->
+                <div class="app-content">
+                    @yield('content')
+                </div>
+                <!--end::App Content-->
+            </main>
+            @include('components.footer')
+        </div>
+    </div>
     <!--begin::Third Party Plugin(OverlayScrollbars)-->
     <script
       src="https://cdn.jsdelivr.net/npm/overlayscrollbars@2.10.1/browser/overlayscrollbars.browser.es6.min.js"
