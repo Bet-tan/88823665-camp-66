@@ -6,43 +6,54 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\UserController;
+use App\Http\Middleware\CheckLogin;
 
-Route::get('/login', [LoginController::class, 'index']);
-Route::get('/register', [RegisterController::class, 'index']);
-Route::get('/home', [HomeController::class, 'index']);
-Route::get('/', [HomeController::class, 'index']);
-
-Route::post('/register', [RegisterController::class, 'create']);
-
-Route::get('/mycontroller/{id?}', [MyController::class, 'myfunction']);
-
-Route::post('/mycontroller/{id?}', [MyController::class, 'myfunction']);
-
-Route::get('/user', [UserController::class, 'index']);
-Route::get('/user/{id}', [UserController::class, 'edit']);
-Route::put('/user/{id}', [UserController::class, 'edit_action']);
-Route::delete('/user', [UserController::class, 'delete']);
-
-Route::get('/mycontroller/{id?}', [MyController::class, 'myfunction']);
-Route::post('/mycontroller/{id?}', [MyController::class, 'myfunction']);
-
-route::get('/hello/{id?}', function ($val= null) {
-    return "<h1>Hello World $val</h1>";
+// User Routes (Halfly Protected)
+Route::middleware([CheckLogin::class])->group(function(){
+    Route::get('/users', [UserController::class, 'index']);
+    Route::get('/user{id}', [UserController::class, 'edit']);
+    Route::put('/user', [UserController::class, 'edit_action']);
+    Route::delete('/user', [UserController::class, 'delete']);
 });
 
+// Login Routes
+Route::get('/', [HomeController::class, 'index'])->middleware([CheckLogin::class]);
+
+Route::get('/login', [LoginController::class, 'index'])->name('login');
+Route::post('/login', [LoginController::class, 'login']);
+Route::get('/logout', function(){
+    session()->forget('user');
+    return redirect('/login');
+});
+
+// Register Routes
+Route::get('/register', [RegisterController::class, 'index']);
+Route::post('/register', [RegisterController::class, 'create']);
+
+// Home Routes
+Route::get('/', [HomeController::class, 'index']);
+Route::get('/home', [HomeController::class, 'index']);
+
+
+
+// MyController Routes
+Route::match(['get', 'post'], '/mycontroller/{id?}', [MyController::class, 'myfunction']);
+
+// Simple Hello Route
+Route::get('/hello/{id?}', function ($val = null) {
+    return "<h1>Hello World " . ($val ?? '') . "</h1>";
+});
+
+// Multiplication Table Route
 Route::match(['get', 'post'], '/multiplication', function (Illuminate\Http\Request $request) {
     $multiplicationTable = [];
-    $number = null;
+    $number = $request->input('number');
 
-    // Check if submitted?
-    if ($request->isMethod('post')) {
-        $number = $request->input('number');
-        // Generate multiplication table for entered number
+    if ($number) {
         for ($i = 1; $i <= 12; $i++) {
             $multiplicationTable[] = $number * $i;
         }
     }
 
-    // Return 'multi' view with data
     return view('multi', compact('number', 'multiplicationTable'));
 });
